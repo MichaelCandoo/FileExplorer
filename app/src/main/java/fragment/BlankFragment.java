@@ -37,10 +37,10 @@ public class BlankFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private int mParam1;
     private String mParam2;
-    private List<String> array_gridView = new ArrayList<>(Arrays.asList("Music", "Video", "Picture", "Docs", "APK", "Download"
-    ));
+    private List<String> array_gridView =
+            new ArrayList<>(Arrays.asList("Picture", "Video", "Music", "APK", "Docs", "Download"));
     private ArrayList<Integer> icon_gridView = new ArrayList<>
-            (Arrays.asList(R.mipmap.image,R.mipmap.video,R.mipmap.music,R.mipmap.apk,R.mipmap.doc,R.mipmap.download));
+            (Arrays.asList(R.mipmap.image, R.mipmap.video, R.mipmap.music, R.mipmap.apk, R.mipmap.doc, R.mipmap.download));
 
 
     //{"Music", "Video", "Picture", "Docs", "APK", "Download"};
@@ -87,8 +87,8 @@ public class BlankFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-            GridView gridView = (GridView) view.findViewById(R.id.gridView);
-            gridView.setAdapter(new GridAdapter());
+        GridView gridView = (GridView) view.findViewById(R.id.gridView);
+        gridView.setAdapter(new GridAdapter());
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -166,4 +166,4 @@ public class BlankFragment extends Fragment {
         }
     }
 
-    }
+}
