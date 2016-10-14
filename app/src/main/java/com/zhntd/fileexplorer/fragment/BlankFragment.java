@@ -1,4 +1,4 @@
-package fragment;
+package com.zhntd.fileexplorer.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -13,7 +13,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.david.myapplication.R;
+
+import com.zhntd.fileexplorer.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

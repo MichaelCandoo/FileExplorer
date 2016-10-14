@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.david.myapplication.com.example.MainActivity">
+    tools:context="com.zhntd.fileexplorer.activity.MainActivity">
 
 
     <Toolbar
@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="File Explorer"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textStyle="bold"
+            android:padding="15dp"
             />
 
         <SearchView
@@ -26,10 +27,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone" />
-
-
-
-
     </Toolbar>
 
     <FrameLayout

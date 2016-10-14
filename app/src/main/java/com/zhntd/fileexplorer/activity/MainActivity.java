@@ -1,4 +1,4 @@
-package com.zhntd;
+package com.zhntd.fileexplorer.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,9 +6,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,16 +17,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-import com.example.david.myapplication.R;
+import com.zhntd.fileexplorer.R;
+import com.zhntd.fileexplorer.fragment.BlankFragment;
+import com.zhntd.fileexplorer.fragment.SearchFragment;
 
-import fragment.BlankFragment;
-import fragment.ImageListFragment;
 
-public class MainActivity extends Activity implements BlankFragment.OnFragmentInteractionListener,ImageListFragment.OnFragmentInteractionListener {
+public class MainActivity extends Activity implements BlankFragment.OnFragmentInteractionListener{
     private static final int icon_toolBar = R.mipmap.file;
-
-    SearchView searchview;
-    TextView textView;
+    private SearchView searchview;
+    private TextView TextView;
+    private TextView textView;
 
 
     @Override
@@ -45,8 +42,7 @@ public class MainActivity extends Activity implements BlankFragment.OnFragmentIn
         textView = (TextView) findViewById(R.id.textView);
  
 
-        Drawable drawable = new ColorDrawable(Color.YELLOW);
-        getActionBar().setBackgroundDrawable(drawable);
+        //getActionBar().setBackgroundDrawable(ColorDrawable.);
         getActionBar().setIcon(icon_toolBar);
         Fragment fragment = BlankFragment.newInstance(R.layout.fragment_blank,null);
         updateFragment(fragment);
@@ -81,8 +77,8 @@ public class MainActivity extends Activity implements BlankFragment.OnFragmentIn
                         }).show();
                 break;
             case R.id.action_search:
-                Fragment fragment_black = ImageListFragment.newInstance(R.layout.fragment_image_list,null);
-                updateFragment(fragment_black);
+                Fragment fragment_search = new SearchFragment();
+                updateFragment(fragment_search);
                 item.setVisible(false);
                 textView.setVisibility(View.GONE);
                 searchview.setVisibility(View.VISIBLE);
