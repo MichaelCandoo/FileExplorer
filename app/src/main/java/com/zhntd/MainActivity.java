@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements BlankFragment.OnFragmentIn
         getActionBar().setTitle("");
         searchview = (SearchView) findViewById(R.id.searchView);
         textView = (TextView) findViewById(R.id.textView);
-
+ 
 
         Drawable drawable = new ColorDrawable(Color.YELLOW);
         getActionBar().setBackgroundDrawable(drawable);
